@@ -1,5 +1,16 @@
+# Images
+*.png
+*.jpg
+
+# Weights
+
+# Misc.
+**/.env
+**/.DS_Store
+.conda
+
 # Byte-compiled / optimized / DLL files
-__pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 
