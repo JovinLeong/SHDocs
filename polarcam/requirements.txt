@@ -1,0 +1,27 @@
+certifi==2023.5.7
+charset-normalizer==3.1.0
+contourpy==1.0.7
+cycler==0.11.0
+fonttools==4.39.4
+idna==3.4
+importlib-resources==5.12.0
+kiwisolver==1.4.4
+matplotlib==3.7.1
+numpy==1.24.3
+opencv-python-headless==4.7.0.72
+packaging==23.1
+Pillow==9.5.0
+pkg_resources==0.0.0
+pyparsing==3.0.9
+PyQt5==5.15.9
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.12.1
+python-dateutil==2.8.2
+requests==2.30.0
+six==1.16.0
+spinnaker-python@<TODO: UPDATE WITH THE PATH TO THE SPINNAKER PYTHON PACKAGE>
+torch==1.12.1+cu113
+torchvision==0.13.1+cu113
+typing_extensions==4.6.0
+urllib3==2.0.2
+zipp==3.15.0

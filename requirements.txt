@@ -1,0 +1,14 @@
+azure-ai-formrecognizer
+azure-cognitiveservices-vision-computervision
+boto3
+easyocr
+matplotlib
+numpy
+opencv-python
+pillow
+pytesseract
+scikit-image
+tensorboard
+torch
+torchmetrics
+tqdm

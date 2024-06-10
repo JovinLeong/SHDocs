@@ -1,0 +1,21 @@
+{
+    "scale_settings": {
+        "rotate_factor": -89.30000000000001,
+        "no_crop_rotate": false,
+        "scale_factor": 0.9680000000000001,
+        "pad_factor": [
+            [
+                100,
+                100
+            ],
+            [
+                100,
+                100
+            ]
+        ],
+        "horizontal_crop_factor": 409,
+        "vertical_crop_factor": 71,
+        "end_horizontal_crop_factor": -210,
+        "end_vertical_crop_factor": -100
+    }
+}
