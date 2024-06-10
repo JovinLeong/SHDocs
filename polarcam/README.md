@@ -24,8 +24,6 @@ Certain components are based on the FLIR Spinnaker SDK [linked here for Asia](ht
 
     In our implementation, we used the installation instructions in the following file:
 
-    **TODO: CHECK THIS**
-
     ```{bash}
     spinnaker-3.1.0.79-amd64-pkg/spinnaker-3.1.0.79-amd64/README
     ```
