@@ -4,11 +4,11 @@ This is the official repository of SHDocs: A dataset, benchmark, and method to e
 
 **TODO: Add abstract**
 
-## SHDocs dataseet
+## SHDocs dataset
 
 ### Dataset
 
-Our dataset is built on top of the [FUNSD dataset](https://guillaumejaume.github.io/FUNSD/) and comprises of 3184 scenes with 19104 images. We collect document images in different specularity conditions and provide a ground truth deglared counterfactual for use in specular highlight removal and image enhancement tasks.
+Our dataset is built on top of the [FUNSD dataset](https://guillaumejaume.github.io/FUNSD/) and comprises 3184 scenes with 19104 images. We collect document images in different specularity conditions and provide a ground truth deglared counterfactual for use in specular highlight removal and image enhancement tasks.
 
 Our dataset can be downloaded [here](TODO: ADD LINK)(~13.5 GB).
 
@@ -20,7 +20,7 @@ Our work includes a [data collection](#image-capture) and [data processing](#pro
 
 ![Data collection and processing method](utils/images/process.jpg)
 
-Image captures are taken using our custom application, processed, and aligned with FUNSD annoations. These images can then be enhanced and evaluated in terms of both image quality and OCR metrics for specular highlight/image enhancement benchmarking.
+Image captures are taken using our custom application, processed, and aligned with FUNSD annotations. These images can then be enhanced and evaluated in terms of both image quality and OCR metrics for specular highlight/image enhancement benchmarking.
 
 ## Prerequisites
 
@@ -32,13 +32,13 @@ Next, install the dependencies using:
 pip install requirements.txt
 ```
 
-Note that not all dependencies are required if you're only using some of the below features.
+Note that not all dependencies are required if you only use some of the below features.
 
 ## Train
 
 As described in the paper, the model we used was [MIMO-UNetPlus](https://github.com/chosj95/MIMO-UNet). Instructions, initial weights, and the code to retrain MIMO-UNetPlus on SHDocs can be found [here](https://github.com/chosj95/MIMO-UNet?tab=readme-ov-file#train).
 
-The model along with details on how to train and enhance using said model are detailed in the ```model``` directory. **TODO: Add link to directory**
+The model along with details on how to train and enhance using said model are detailed in the [```model```](https://github.com/JovinLeong/SHDocs/tree/main/model) directory.
 
 ## Enhance
 
@@ -46,7 +46,7 @@ To enhance images using the MIMO-UNet model retrained on SHDocs, you can use [MI
 
 [The weights used in the paper can be found here](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EQNbX5o3r_tBg19zlIO2mlYB4iLxUTHKJmB2sm4s52_gMQ?e=9cxj4h).
 
-Alternatively, details on how to enhance images using the model described in the paper are detailed in the ```model``` directory. **TODO: Add link to directory**
+Alternatively, details on how to enhance images using the model described in the paper are detailed in the [```model```](https://github.com/JovinLeong/SHDocs/tree/main/model) directory.
 
 ## OCR inference
 
@@ -54,9 +54,9 @@ To perform OCR inference, you will first need to obtain the necessary keys to ca
 
 For Azure Document Intelligence, follow [this guide](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/how-to-guides/use-sdk-rest-api) to get your API key and endpoint. Once you have your Azure Document Intelligence API key, make an environment file titled ```.env``` and update the values accordingly. Ensure that the ```.env``` file follows the same structure as the ```.env.example``` file provided.
 
-Meanwhile for Azure Textract, instructions to set up your AWS credentials can be found [here](https://docs.aws.amazon.com/cli/v1/userguide/cli-configure-files.html).
+Meanwhile, for Azure Textract, instructions to set up your AWS credentials can be found [here](https://docs.aws.amazon.com/cli/v1/userguide/cli-configure-files.html).
 
-With that done, you can call on the function and specify the model, inference method, and data you'd like to perform OCR inference on. e.g.:
+With that done, you can call on the function and specify the model, inference method, and data on which you'd like to perform OCR inference. e.g.:
 
 ```{bash}
 python inference_ocr.py --input_dir 'data/enhanced_images_crops/mimo/images' --dataset 'shdocs dataset mimo enhanced testing data' --model 'document_intelligence' --method 'batched'
@@ -70,7 +70,7 @@ python inference_ocr.py --input_dir 'data/enhanced_images_crops/mimo/images' --d
 
 Batched inference is recommended if you are inferencing a large number of crops with either Azure or AWS due to the latency involved in sending many requests.
 
-Prior to OCR inference, the directory structure can be made easier to work with through the use of the ```restructure_captures``` function in [```utils/image_utils.py```](TODO: ADD LINK)**TODO: Add link to scripts**.
+Prior to OCR inference, the directory structure can be made easier to work with through the use of the ```restructure_captures``` function in [```utils/image_utils.py```](https://github.com/JovinLeong/SHDocs/blob/main/utils/image_utils.py).
 
 ## Evaluation
 
@@ -92,7 +92,7 @@ e.g.
 python image_quality_evaluation.py -g 'data/shdocs_dataset/restructured/testing_data/deglared' -e 'data/mimo_enhanced/' -o 'evaluation of mimo enhanced outputs' -m 'mimo'
 ```
 
-Prior to evaluation, the directory structure can be made easier to work with through the use of the ```restructure_captures``` function in [```utils/image_utils.py```](TODO: ADD LINK)**TODO: Add link to scripts**.
+Prior to evaluation, the directory structure can be made easier to work with through the use of the ```restructure_captures``` function in [```utils/image_utils.py```](https://github.com/JovinLeong/SHDocs/blob/main/utils/image_utils.py).
 
 ### OCR evaluation
 
@@ -112,7 +112,7 @@ python ocr_evaluation.py --annotation_dir data/outputs/enhanced_images_crops/mim
 
 ## Image capture
 
-To use our GUI and scripts to capture aligned specular highlight data, follow the instructions in the [polarcam directory](TODO: ADD LINK) **TODO: Add link to scripts**.
+To use our GUI and scripts to capture aligned specular highlight data, follow the instructions in the [polarcam directory](https://github.com/JovinLeong/SHDocs/tree/main/polarcam).
 
 ## Process data
 
@@ -120,9 +120,9 @@ Several data processing capabilities are included in our data processing scripts
 
 ### Determining image adjustment
 
-After [capturing images](#image-capture), there is a need to scale and adjust the image capture to ensure that it aligns with the FUNSD annotations. This is necessary for OCR evaluation, as it ensures that the positions of the text are aligned to that of the FUNSD annotations and enables us to compute the OCR metrics of OCR inference outcomes on the enhanced images.
+After [capturing images](#image-capture), it is necessary to scale and adjust the image capture to ensure that it aligns with the FUNSD annotations. This is necessary for OCR evaluation, as it ensures that the positions of the text are aligned with that of the FUNSD annotations and enables us to compute the OCR metrics of OCR inference outcomes on the enhanced images.
 
-To do this, we have developed a OpenCV-based tool to visualize and adjust the images using keyboard controls and store the adjustments in a JSON file such that the adjustments can be applied to the image.
+To do this, we have developed an OpenCV-based tool to visualize and adjust the images using keyboard controls and store the adjustments in a JSON file such that the adjustments can be applied to the image.
 
 The tool overlays the FUNSD annotations over the captured image and allows you to use your keyboard to rotate, zoom, pan, and crop the captured image until it aligns with the annotations. Then, these settings are stored and an adjusted image is stored in the target directory. Instructions on the controls are detailed within the script itself.
 
@@ -140,7 +140,7 @@ python adjust_image.py --document_name 82253362_3364 --raw_document_directory '.
 
 ### Applying image adjustments
 
-This functionality enables the use of past adjustment metadata files to process all raw documents. Our adjustment metadata is inclueded [here](TODO: LINK TO METADATA FILE) **TODO: ADD LINK TO METADATA**. To apply past adjustments, go to the ```utils``` directory and run:
+This functionality enables the use of past adjustment metadata files to process all raw documents. Our adjustment metadata is included [here](https://github.com/JovinLeong/SHDocs/blob/main/utils/image_adjustment_metadata/scaling_metadata.json). To apply past adjustments, go to the ```utils``` directory and run:
 
 ```{bash}
 python apply_image_adjustments.py --metadata <path to metadata> --image_directory <path to image directory> --output_directory <path to output directory>
