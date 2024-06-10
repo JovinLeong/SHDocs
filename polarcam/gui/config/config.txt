@@ -1,0 +1,6 @@
+[API]
+text_enhancer_url=http://127.0.0.1:4001/infer_dual
+text_detector_url=http://127.0.0.1:4000/infer
+
+[CBRNE]
+ocr_detector_url=http://192.168.1.101:8080
