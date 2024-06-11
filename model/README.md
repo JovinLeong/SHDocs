@@ -2,6 +2,13 @@
 
 This directory contains the details to retrain [MIMO-UNetPlus](https://github.com/chosj95/MIMO-UNet) as specified in the paper and use the MIMO-UNetPlus model to enhance images. Base code are attributed to the original authors of MIMO-UNetPlus.
 
+| Model         | Dataset model was trained on |   Size  | SHIQ PSNR | SHIQ SSIM | PSD PSNR | PSD SSIM |
+|---------------|------------------------------|:-------:|:---------:|:---------:|:--------:|:--------:|
+| TSHRNet       | SSHR, SHIQ, PSD              |  468 MB |    25.6   |   0.933   |   22.8   |   0.903  |
+| Hu et al.     | SHIQ                         |  412 MB |    33.9   |   0.980   |   27.5   |   0.970  |
+| MIMO-UNetPlus | SHDocs                       | 64.6 MB |    22.4   |   0.915   |   28.0   |   0.956  |
+| MIMO-UNetPlus | GoPro                        | 64.6 MB |    23.1   |   0.903   |   18.1   |   0.705  |
+
 ## Prerequisites
 
 Next, install the all the prerequisites and dependenices as specified in the main README dependencies.
