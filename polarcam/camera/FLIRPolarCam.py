@@ -281,7 +281,7 @@ class PolarCam:
         Returns:
             _type_: _description_
         """
-        #TODO: Likely need to set upper and lower limit of exposure or modify actual exposure. 
+        # Likely need to set upper and lower limit of exposure or modify actual exposure. 
         try:
             print('*** CONFIGURING EXPOSURE ***\n')
 

@@ -68,7 +68,7 @@ Or
 python inference_ocr.py --input_dir 'data/enhanced_images_crops/mimo/images' --dataset 'shdocs dataset mimo enhanced testing data' --model 'tesseract'
 ```
 
-Batched inference is recommended if you are inferencing a large number of crops with either Azure or AWS due to the latency involved in sending many requests.
+Batched inference is recommended if you are performing inference on a large number of crops with either Azure or AWS due to the latency involved in sending many requests.
 
 Prior to OCR inference, the directory structure can be made easier to work with through the use of the ```restructure_captures``` function in [```utils/image_utils.py```](https://github.com/JovinLeong/SHDocs/blob/main/utils/image_utils.py).
 
@@ -161,7 +161,7 @@ Once images have been aligned to the FUNSD annotations they can be cropped based
 To apply crop images based on their OCR annotations, go to the ```utils``` directory and run:
 
 ```{bash}
-python crop_funsd_documents.py --input_path <path to data and annoations formatted as per FUNSD> --output_path <path to where the crops should reside>   --bbox_buffer=<number of pixels to buffer bboxes> --dataset=<dataset type>
+python crop_funsd_documents.py --input_path <path to data and annotations formatted as per FUNSD> --output_path <path to where the crops should reside>   --bbox_buffer=<number of pixels to buffer bboxes> --dataset=<dataset type>
 ```
 
 e.g.

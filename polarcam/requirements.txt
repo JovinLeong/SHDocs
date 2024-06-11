@@ -19,7 +19,7 @@ PyQt5-sip==12.12.1
 python-dateutil==2.8.2
 requests==2.30.0
 six==1.16.0
-spinnaker-python@<TODO: UPDATE WITH THE PATH TO THE SPINNAKER PYTHON PACKAGE>
+spinnaker-python@<UPDATE WITH THE PATH TO THE SPINNAKER PYTHON PACKAGE>
 torch==1.12.1+cu113
 torchvision==0.13.1+cu113
 typing_extensions==4.6.0
