@@ -2,6 +2,8 @@
 
 This directory contains the details to retrain [MIMO-UNetPlus](https://github.com/chosj95/MIMO-UNet) as specified in the paper and use the MIMO-UNetPlus model to enhance images. Base code are attributed to the original authors of MIMO-UNetPlus.
 
+Below are the results of our generalizability study; more details and analysis can be found in our paper.
+
 | Model         | Dataset model was trained on |   Size  | SHIQ PSNR | SHIQ SSIM | PSD PSNR | PSD SSIM |
 |---------------|------------------------------|:-------:|:---------:|:---------:|:--------:|:--------:|
 | TSHRNet       | SSHR, SHIQ, PSD              |  468 MB |    25.6   |   0.933   |   22.8   |   0.903  |
@@ -11,7 +13,7 @@ This directory contains the details to retrain [MIMO-UNetPlus](https://github.co
 
 ## Prerequisites
 
-Next, install the all the prerequisites and dependenices as specified in the main README dependencies.
+Next, install the all the prerequisites and dependencies as specified in the main README dependencies.
 
 ## Train
 
@@ -23,7 +25,7 @@ The training samples used for the validation set are listed in [```validation_id
 
 ## Enhance
 
-To enhance images using the MIMO-UNet model retrained on SHDocs, you can use [MIMO-UNet's testing function](https://github.com/chosj95/MIMO-UNet?tab=readme-ov-file#test) with ```--save_image=True```. 
+To enhance images using the MIMO-UNet model retrained on SHDocs, you can use [MIMO-UNet's testing function](https://github.com/chosj95/MIMO-UNet?tab=readme-ov-file#test) with ```--save_image=True```.
 
 Alternatively, we provide a script ```enhance.py``` that extends some of the existing code from [MIMO-UNet](https://github.com/chosj95/MIMO-UNet) to enhance images without requiring the ground truth images.
 
