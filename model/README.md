@@ -28,7 +28,7 @@ The weights of MIMO-UNetPlus were trained on SHDocs with randomly initialized we
 
 The training samples used for the validation set are listed in [```validation_ids.txt```](https://github.com/JovinLeong/SHDocs/blob/main/model/validation_ids.txt)
 
-Our model, a MIMO-UNetPlus retrained on SHDocs, that we reference in our paper can be downloaded in the following links
+Our model that is referenced in our paper, a MIMO-UNetPlus model retrained on SHDocs, can be downloaded through the following links:
 
 - [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EQNbX5o3r_tBg19zlIO2mlYB4iLxUTHKJmB2sm4s52_gMQ)
 - [Google Drive](https://drive.google.com/file/d/1KYpwIinRQhET2BDsx5F18pIBzGwnv0yJ/view?usp=sharing)
