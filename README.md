@@ -176,4 +176,4 @@ python crop_funsd_documents.py --input_path ../data/shdocs_dataset/processed_cap
 
 ## Citation
 
-TBC
+TODO: Update
