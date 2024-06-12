@@ -13,8 +13,9 @@ Abstract:
 Our dataset is built on top of the [FUNSD dataset](https://guillaumejaume.github.io/FUNSD/) and comprises 3184 scenes with 19104 images. We collect document images in different specularity conditions and provide a ground truth deglared counterfactual for use in specular highlight removal and image enhancement tasks.
 
 SHDocs can be downloaded from the following links (~13.5 GB):
-    - SHDocs raw data: [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EcJDKkwv5_BKk4T7E2-A0qsB06zOpMj-wywW7bz1v3wF-w?e=2u4cHQ) or [Google Drive](https://drive.google.com/file/d/1J5OekUKSCrcqfXLzCMkgae7nPLd-5WCN/view?usp=sharing)
-    - SHDocs processed data: [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EY_m6N_VApVKhBOFZe-4rNYB_r0W1FExQT6WHDO77Rti0A?e=lLxmYM) or [Google Drive](https://drive.google.com/file/d/1zotvR5kAfYz5564C0QvuExIksmNtuPst/view?usp=sharing)
+
+- SHDocs raw data: [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EcJDKkwv5_BKk4T7E2-A0qsB06zOpMj-wywW7bz1v3wF-w?e=2u4cHQ) or [Google Drive](https://drive.google.com/file/d/1J5OekUKSCrcqfXLzCMkgae7nPLd-5WCN/view?usp=sharing)
+- SHDocs processed data: [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EY_m6N_VApVKhBOFZe-4rNYB_r0W1FExQT6WHDO77Rti0A?e=lLxmYM) or [Google Drive](https://drive.google.com/file/d/1zotvR5kAfYz5564C0QvuExIksmNtuPst/view?usp=sharing)
 
 ![Sample SHDocs images](utils/images/sample.png)
 
