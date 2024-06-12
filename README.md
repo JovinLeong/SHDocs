@@ -49,7 +49,10 @@ The model along with details on how to train and enhance using said model are de
 
 To enhance images using the MIMO-UNet model retrained on SHDocs, you can use [MIMO-UNet's testing function](https://github.com/chosj95/MIMO-UNet?tab=readme-ov-file#test) with ```--save_image=True```.
 
-[The weights used in the paper can be found here](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EQNbX5o3r_tBg19zlIO2mlYB4iLxUTHKJmB2sm4s52_gMQ?e=9cxj4h).
+Our model that is referenced in our paper, a MIMO-UNetPlus model retrained on SHDocs, can be downloaded through the following links:
+
+- [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EQNbX5o3r_tBg19zlIO2mlYB4iLxUTHKJmB2sm4s52_gMQ)
+- [Google Drive](https://drive.google.com/file/d/1KYpwIinRQhET2BDsx5F18pIBzGwnv0yJ/view?usp=sharing)
 
 Alternatively, details on how to enhance images using the model described in the paper are detailed in the [```model```](https://github.com/JovinLeong/SHDocs/tree/main/model) directory.
 
