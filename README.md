@@ -2,7 +2,9 @@
 
 This is the official repository of SHDocs: A dataset, benchmark, and method to efficiently generate high-quality, real-world specular highlight data with near-perfect alignment.
 
-**TODO: Add abstract**
+Abstract:
+
+> A frequent problem in vision-based reasoning tasks such as object detection and optical character recognition (OCR) is the persistence of specular highlights. Specular highlights appear as bright spots of glare that occur due to the concentrated reflection of light; these spots manifest as image artifacts which occlude computer vision models and are challenging to reconstruct. Despite this, specular highlight removal receives relatively little attention due to the difficulty of acquiring high-quality, real-world data. We introduce a method to generate specular highlight data with near-perfect alignment and present SHDocs—a dataset of specular highlights on document images created using our method. Through our benchmark, we demonstrate that our dataset enables us to surpass the performance of state-of-the-art specular highlight removal models and downstream OCR tasks. We release our dataset, code, and methods publicly to motivate further exploration of image enhancement for practical computer vision challenges.
 
 ## SHDocs dataset
 
@@ -10,7 +12,9 @@ This is the official repository of SHDocs: A dataset, benchmark, and method to e
 
 Our dataset is built on top of the [FUNSD dataset](https://guillaumejaume.github.io/FUNSD/) and comprises 3184 scenes with 19104 images. We collect document images in different specularity conditions and provide a ground truth deglared counterfactual for use in specular highlight removal and image enhancement tasks.
 
-Our dataset can be downloaded [here](TODO: ADD LINK)(~13.5 GB).
+SHDocs can be downloaded from the following links (~13.5 GB):
+    - SHDocs raw data: [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EcJDKkwv5_BKk4T7E2-A0qsB06zOpMj-wywW7bz1v3wF-w?e=2u4cHQ) or [Google Drive](https://drive.google.com/file/d/1J5OekUKSCrcqfXLzCMkgae7nPLd-5WCN/view?usp=sharing)
+    - SHDocs processed data: [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EY_m6N_VApVKhBOFZe-4rNYB_r0W1FExQT6WHDO77Rti0A?e=lLxmYM) or [Google Drive](https://drive.google.com/file/d/1zotvR5kAfYz5564C0QvuExIksmNtuPst/view?usp=sharing)
 
 ![Sample SHDocs images](utils/images/sample.png)
 
@@ -42,7 +46,7 @@ The model along with details on how to train and enhance using said model are de
 
 ## Enhance
 
-To enhance images using the MIMO-UNet model retrained on SHDocs, you can use [MIMO-UNet's testing function](https://github.com/chosj95/MIMO-UNet?tab=readme-ov-file#test) with ```--save_image=True```. 
+To enhance images using the MIMO-UNet model retrained on SHDocs, you can use [MIMO-UNet's testing function](https://github.com/chosj95/MIMO-UNet?tab=readme-ov-file#test) with ```--save_image=True```.
 
 [The weights used in the paper can be found here](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EQNbX5o3r_tBg19zlIO2mlYB4iLxUTHKJmB2sm4s52_gMQ?e=9cxj4h).
 
@@ -172,4 +176,4 @@ python crop_funsd_documents.py --input_path ../data/shdocs_dataset/processed_cap
 
 ## Citation
 
-TBC
+TODO: Update
