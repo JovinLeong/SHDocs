@@ -1,4 +1,9 @@
-# Weights
+# Data
+data/processed_captures/*
+data/raw_captures/*
+*.zip
+*.tar.gz
+*.tar.bz2
 
 # Misc.
 **/.env

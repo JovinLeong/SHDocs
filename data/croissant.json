@@ -1,0 +1,549 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "shdocs",
+  "description": "A frequent problem in vision-based reasoning tasks such as object detection and optical character recognition (OCR) is the persistence of specular highlights. Specular highlights appear as bright spots of glare that occur due to the concentrated reflection of light; these spots manifest as image artifacts which occlude computer vision models and are challenging to reconstruct. Despite this, specular highlight removal receives relatively little attention due to the difficulty of acquiring high-quality, real-world data. We introduce a method to generate specular highlight data with near-perfect alignment and present SHDocs\u2014a dataset of specular highlights on document images created using our method. Through our benchmark, we demonstrate that our dataset enables us to surpass the performance of state-of-the-art specular highlight removal models and downstream OCR tasks. We release our dataset, code, and methods publicly to motivate further exploration of image enhancement for practical computer vision challenges.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "@article{leong2024shdocs, title={SHDocs: A dataset, benchmark, and method to efficiently generate high-quality, real-world specular highlight data with near-perfect alignment},  author={Jovin Leong, Ming Di Koa, Benjamin Wen Bin Cham, Shaun Wei Quan Heng}, year={2024} }",
+  "license": "MIT License",
+  "url": "https://github.com/JovinLeong/SHDocs",
+  "version": "1.0.0",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_training_data_s0_norm",
+      "name": "raw_training_data_s0_norm",
+      "description": "Raw s0_norm training data.",
+      "contentUrl": "./raw_captures/training_data/images/s0_norm",
+      "encodingFormat": "application/folder",
+      "sha256": "29536b0a5c59d3c6824e2f9803d9b8f4780a3a3f417f0e4a30fe1757c3645579"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_training_data_i0",
+      "name": "raw_training_data_i0",
+      "description": "Raw i0 training data.",
+      "contentUrl": "./raw_captures/training_data/images/i0",
+      "encodingFormat": "application/folder",
+      "sha256": "29536b0a5c59d3c6824e2f9803d9b8f4780a3a3f417f0e4a30fe1757c3645579"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_training_data_i45",
+      "name": "raw_training_data_i45",
+      "description": "Raw i45 training data.",
+      "contentUrl": "./raw_captures/training_data/images/i45",
+      "encodingFormat": "application/folder",
+      "sha256": "29536b0a5c59d3c6824e2f9803d9b8f4780a3a3f417f0e4a30fe1757c3645579"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_training_data_i90",
+      "name": "raw_training_data_i90",
+      "description": "Raw i90 training data.",
+      "contentUrl": "./raw_captures/training_data/images/i90",
+      "encodingFormat": "application/folder",
+      "sha256": "29536b0a5c59d3c6824e2f9803d9b8f4780a3a3f417f0e4a30fe1757c3645579"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_training_data_i135",
+      "name": "raw_training_data_i135",
+      "description": "Raw i135 training data.",
+      "contentUrl": "./raw_captures/training_data/images/i135",
+      "encodingFormat": "application/folder",
+      "sha256": "29536b0a5c59d3c6824e2f9803d9b8f4780a3a3f417f0e4a30fe1757c3645579"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_training_data_deglared",
+      "name": "raw_training_data_deglared",
+      "description": "Raw deglared training data.",
+      "contentUrl": "./raw_captures/training_data/images/deglared",
+      "encodingFormat": "application/folder",
+      "sha256": "29536b0a5c59d3c6824e2f9803d9b8f4780a3a3f417f0e4a30fe1757c3645579"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_testing_data_s0_norm",
+      "name": "raw_testing_data_s0_norm",
+      "description": "Raw s0_norm testing data.",
+      "contentUrl": "./raw_captures/testing_data/images/s0_norm",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_testing_data_i0",
+      "name": "raw_testing_data_i0",
+      "description": "Raw i0 testing data.",
+      "contentUrl": "./raw_captures/testing_data/images/i0",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_testing_data_i45",
+      "name": "raw_testing_data_i45",
+      "description": "Raw i45 testing data.",
+      "contentUrl": "./raw_captures/testing_data/images/i45",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_testing_data_i90",
+      "name": "raw_testing_data_i90",
+      "description": "Raw i90 testing data.",
+      "contentUrl": "./raw_captures/testing_data/images/i90",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_testing_data_i135",
+      "name": "raw_testing_data_i135",
+      "description": "Raw i135 testing data.",
+      "contentUrl": "./raw_captures/testing_data/images/i135",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_testing_data_deglared",
+      "name": "raw_testing_data_deglared",
+      "description": "Raw deglared testing data.",
+      "contentUrl": "./raw_captures/testing_data/images/deglared",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_testing_data_s0_norm",
+      "name": "processed_testing_data_s0_norm",
+      "description": "Processed s0_norm testing data.",
+      "contentUrl": "./processed_captures/testing_data/images/s0_norm",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_testing_data_i0",
+      "name": "processed_testing_data_i0",
+      "description": "Processed i0 testing data.",
+      "contentUrl": "./processed_captures/testing_data/images/i0",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_testing_data_i45",
+      "name": "processed_testing_data_i45",
+      "description": "Processed i45 testing data.",
+      "contentUrl": "./processed_captures/testing_data/images/i45",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_testing_data_i90",
+      "name": "processed_testing_data_i90",
+      "description": "Processed i90 testing data.",
+      "contentUrl": "./processed_captures/testing_data/images/i90",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_testing_data_i135",
+      "name": "processed_testing_data_i135",
+      "description": "Processed i135 testing data.",
+      "contentUrl": "./processed_captures/testing_data/images/i135",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_testing_data_deglared",
+      "name": "processed_testing_data_deglared",
+      "description": "Processed deglared testing data.",
+      "contentUrl": "./processed_captures/testing_data/images/deglared",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "processed_testing_data_annotations",
+      "name": "processed_testing_data_annotations",
+      "description": "Processed testing data text annotations.",
+      "contentUrl": "./processed_captures/testing_data/annotations",
+      "encodingFormat": "application/folder",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "raw_training_image_files",
+      "name": "raw_training_image_files",
+      "description": "Raw training images.",
+      "containedIn": [
+        {
+          "@id": "raw_training_data_s0_norm"
+        },
+        {
+          "@id": "raw_training_data_i0"
+        },
+        {
+          "@id": "raw_training_data_i45"
+        },
+        {
+          "@id": "raw_training_data_i90"
+        },
+        {
+          "@id": "raw_training_data_i135"
+        },
+        {
+          "@id": "raw_training_data_deglared"
+        }
+      ],
+      "encodingFormat": "image/png",
+      "includes": "*.png"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "raw_testing_image_files",
+      "name": "raw_testing_image_files",
+      "description": "Raw testing images.",
+      "containedIn": [
+        {
+          "@id": "raw_testing_data_s0_norm"
+        },
+        {
+          "@id": "raw_testing_data_i0"
+        },
+        {
+          "@id": "raw_testing_data_i45"
+        },
+        {
+          "@id": "raw_testing_data_i90"
+        },
+        {
+          "@id": "raw_testing_data_i135"
+        },
+        {
+          "@id": "raw_testing_data_deglared"
+        }
+      ],
+      "encodingFormat": "image/png",
+      "includes": "*.png"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "processed_testing_image_files",
+      "name": "processed_testing_image_files",
+      "description": "Processed testing images.",
+      "containedIn": [
+        {
+          "@id": "processed_testing_data_s0_norm"
+        },
+        {
+          "@id": "processed_testing_data_i0"
+        },
+        {
+          "@id": "processed_testing_data_i45"
+        },
+        {
+          "@id": "processed_testing_data_i90"
+        },
+        {
+          "@id": "processed_testing_data_i135"
+        },
+        {
+          "@id": "processed_testing_data_deglared"
+        }
+      ],
+      "encodingFormat": "image/png",
+      "includes": "*.png"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "processed_testing_annotation_files",
+      "name": "processed_testing_annotation_files",
+      "description": "Processed testing text annotations.",
+      "containedIn": {
+        "@id": "processed_testing_data_annotations"
+      },
+      "encodingFormat": "application/json",
+      "includes": "*.json"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "raw_training_images",
+      "name": "raw_training_images",
+      "key": "image_id",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "raw_training_images/image_id",
+          "name": "image_id",
+          "description": "Image ID for raw training images e.g. 00040534_a",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "raw_training_image_files"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            },
+            "transform": {
+              "regex": "^(.*)\\.png$"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "raw_training_images/image_filename",
+          "name": "image_filename",
+          "description": "Image filename for raw training images e.g. 00040534_a.png",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "raw_training_image_files"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "raw_training_images/image_content",
+          "name": "image_content",
+          "description": "Raw training images",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "raw_training_image_files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "raw_testing_images",
+      "name": "raw_testing_images",
+      "key": "image_id",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "raw_testing_images/image_id",
+          "name": "image_id",
+          "description": "Image ID for raw testing images e.g. 00040534_a",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "raw_testing_image_files"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            },
+            "transform": {
+              "regex": "^(.*)\\.png$"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "raw_testing_images/image_filename",
+          "name": "image_filename",
+          "description": "Image ID for raw testing images e.g. 00040534_a.png",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "raw_testing_image_files"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "raw_testing_images/image_content",
+          "name": "image_content",
+          "description": "Raw testing image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "raw_testing_image_files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "processed_testing_images",
+      "name": "processed_testing_images",
+      "key": "image_id",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "processed_testing_images/image_id",
+          "name": "image_id",
+          "description": "Image ID for processed testing images e.g. 00040534_a",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "processed_testing_image_files"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            },
+            "transform": {
+              "regex": "^(.*)\\.png$"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "processed_testing_images/image_filename",
+          "name": "image_filename",
+          "description": "Image ID for processed testing images e.g. 00040534_a.png",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "processed_testing_image_files"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "processed_testing_images/image_content",
+          "name": "image_content",
+          "description": "Processed testing image",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": {
+              "@id": "processed_testing_image_files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "processed_testing_annotations",
+      "name": "processed_testing_annotations",
+      "key": "annotation_id",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "processed_testing_annotations/annotation_id",
+          "name": "annotation_id",
+          "description": "Annotation ID associated with processed testing document 00040534",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "processed_testing_annotation_files"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            },
+            "transform": {
+              "regex": "^(.*)\\.json$"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "processed_testing_annotations/annotation_filename",
+          "name": "annotation_filename",
+          "description": "Annotation filename associated with processed testing document 00040534.json",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "processed_testing_annotation_files"
+            },
+            "extract": {
+              "fileProperty": "filename"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "processed_testing_annotations/annotations",
+          "name": "annotations",
+          "description": "Annotation file associated with processed testing document",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "processed_testing_annotation_files"
+            },
+            "extract": {
+              "fileProperty": "content"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
