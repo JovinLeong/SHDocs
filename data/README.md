@@ -35,3 +35,4 @@ Due to resource limitations, we currently only have the processed data for the t
     ```{bash}
     raw_captures/training_data/images/0060000813_a/i0.png
     ```
+- Croissant's records will error out if unexpected files are in the dataset. This is common in MacOS, where `.DS_Store` and `._<filename>` artifacts are sometimes created, resulting in errors.
