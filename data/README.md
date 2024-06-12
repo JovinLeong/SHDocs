@@ -1,3 +1,37 @@
 # Data
 
-TBC
+This directory gives detailed instructions on how to download and work with the SHDocs dataset as well as to access it's metadata data using `mlcroissant`
+
+## Downloading SHDocs
+
+1. SHDocs can be downloaded from the following links:
+    - SHDocs raw data: [Microsoft OneDrive](TODO) or [Google Drive](TODO)
+    - SHDocs processed data: [Microsoft OneDrive](TODO) or [Google Drive](TODO)
+2. Once downloaded, move both the raw data and processed data into this directory and unzip them.
+3. With that done, you can use the data directly or use the `croissant.ipynb` notebook to access the dataset [Croissant](https://mlcommons.org/working-groups/data/croissant/) metadata. Further instructions on working with Croissant are provided in the notebook and [here](https://github.com/mlcommons/croissant/tree/main/)
+
+## Working with SHDocs
+
+### Raw data
+
+The raw data can be used directly as it consists solely of image captures in various reconstructions detailed in our paper. Of note are the following:
+
+- `deglared`: `deglared` images are reconstructions made by using all four polarization angles captured by the polarization sensor without glare.
+- `s0_norm`: `s0_norm` images are reconstructions made by normalizing the aggregate of `i0` and `i90` which is equivalent to a "normal" greyscale image captured by a camera. The `s0_norm` image and `deglared` images are perfectly aligned and can be thought of as counterfactuals which can be used in specular highlight removal and general image enhancement tasks.
+
+### Processed data
+
+The method of processing the data is described in our paper and the [pipeline](https://github.com/JovinLeong/SHDocs?tab=readme-ov-file#method). Essentially, we scale the image captures to align them to the FUNSD text annotations so as to enable OCR evaluation of the enhanced images.
+
+Typically, models can be trained using the raw data and then the processed testing data can be passed through these trained models and evaluated.
+
+Due to resource limitations, we currently only have the processed data for the testing set. This enables evaluation but limits the ability to perform text-aware model training; however, we will provide processed testing data as soon as possible.
+
+## Known issues
+
+- Due to resource limitations, we currently only have the processed data for the testing set. However, we will provide processed testing data as soon as possible.
+- The following images in the dataset are known to have been corrupted:
+
+    ```{bash}
+    raw_captures/training_data/images/0060000813_a/i0.png
+    ```

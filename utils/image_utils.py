@@ -2,6 +2,38 @@ import os
 import cv2
 import sys
 import shutil
+from constants import ALPHABET_MAPPING
+
+def restructure_images(source_dir, target_dir):
+    # Define the target directories
+    dirs = ['i0', 'i45', 'i90', 'i135', 's0_norm', 'deglared']
+    
+    # Missing images
+    missing = []
+
+    # Create the target directories if they don't exist
+    for dir_name in dirs:
+        os.makedirs(os.path.join(target_dir, dir_name), exist_ok=True)
+
+    # Get a list of all directories in the current working directory
+    image_ids = [d for d in os.listdir(source_dir) if d[0] != '.']
+
+    # Iterate over each image_id directory
+    for image_id in image_ids:
+        # Iterate over each target directory
+        for dir in dirs:
+            # Construct the source file path
+            source_file_path = os.path.join(source_dir, image_id, dir + '.png')
+            target_file_path = os.path.join(target_dir, dir,  image_id + '.png')
+            
+            try:
+                shutil.copy2(source_file_path, target_file_path)
+            except FileNotFoundError:
+                print("File not found: ", source_file_path)
+                missing.append(source_file_path)
+
+    print("Missing files: ", missing)
+    return None
 
 def duplicate_annotations(annotation_dir, output_dir):
     """Duplicate annotations for each alphabet which corresponds to the different SHDocs transparency
