@@ -4,8 +4,13 @@ This directory contains the details to retrain [MIMO-UNetPlus](https://github.co
 
 Our model, a MIMO-UNetPlus retrained on SHDocs, that we reference in our paper can be downloaded in the following links
 
-- [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EQNbX5o3r_tBg19zlIO2mlYB4iLxUTHKJmB2sm4s52_gMQ)
-- [Google Drive](https://drive.google.com/file/d/1KYpwIinRQhET2BDsx5F18pIBzGwnv0yJ/view?usp=sharing)
+- First generalization study:
+  - [Microsoft OneDrive](https://hometeamsnt-my.sharepoint.com/:u:/g/personal/jovin_leong_hometeamsnt_onmicrosoft_com/EQNbX5o3r_tBg19zlIO2mlYB4iLxUTHKJmB2sm4s52_gMQ)
+  - [Google Drive](https://drive.google.com/file/d/1KYpwIinRQhET2BDsx5F18pIBzGwnv0yJ/view?usp=sharing)
+- Second generalization study:
+  - [Microsoft OneDrive]()
+  - [Google Drive](https://drive.google.com/file/d/1WiiYMpmhfyz4Ke7MVWyuBQr477IK4hWk/view?usp=sharing)
+
 
 Below are the results of our generalizability study; more details and analysis can be found in our paper.
 
