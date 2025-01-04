@@ -33,7 +33,7 @@ We recommend creating a virtual environment using ```venv``` or ```conda``` to m
 
 Next, install the dependencies using:
 
-```{bash}
+```bash
 pip install requirements.txt
 ```
 
@@ -66,13 +66,13 @@ Meanwhile, for Azure Textract, instructions to set up your AWS credentials can b
 
 With that done, you can call on the function and specify the model, inference method, and data on which you'd like to perform OCR inference. e.g.:
 
-```{bash}
+```bash
 python inference_ocr.py --input_dir 'data/enhanced_images_crops/mimo/images' --dataset 'shdocs dataset mimo enhanced testing data' --model 'document_intelligence' --method 'batched'
 ```
 
 Or
 
-```{bash}
+```bash
 python inference_ocr.py --input_dir 'data/enhanced_images_crops/mimo/images' --dataset 'shdocs dataset mimo enhanced testing data' --model 'tesseract'
 ```
 
@@ -90,13 +90,13 @@ Image quality evaluation looks at a directory of target images and a directory o
 
 To perform image quality evaluation, run:
 
-```{bash}
+```bash
 python image_quality_evaluation.py -g <path to ground truth> -e <path to evaluation target> -o <description> -m <model name>
 ```
 
 e.g.
 
-```{bash}
+```bash
 python image_quality_evaluation.py -g 'data/shdocs_dataset/restructured/testing_data/deglared' -e 'data/mimo_enhanced/' -o 'evaluation of mimo enhanced outputs' -m 'mimo'
 ```
 
@@ -108,13 +108,13 @@ OCR evaluation takes the outputs of the [OCR inference](#ocr-inference) and comp
 
 To perform OCR evaluation, run:
 
-```{bash}
+```bash
 python ocr_evaluation.py --annotation_dir <path to FUNSD crop annotations> --inference_outputs_directory <path to OCR inference outputs> --evaluation_objective <description of the evaluation objective> --output_dir <directory to output evaluations>
 ```
 
 e.g.
 
-```{bash}
+```bash
 python ocr_evaluation.py --annotation_dir data/outputs/enhanced_images_crops/mimo/annotations --inference_outputs_directory data/outputs/inference_mimo_pure_crops --evaluation_objective "shdocs_eval_mimo_pure_enhancement" --output_dir data/outputs/ocr_evaluations
 ```
 
@@ -136,13 +136,13 @@ The tool overlays the FUNSD annotations over the captured image and allows you t
 
 To use the tool, go to the ```utils``` directory and run:
 
-```{bash}
+```bash
 python adjust_image.py --document_name <name of document> --raw_document_directory <path to documents to be adjusted> --processed_document_directory <path to documents that have been processed> --annotation_directory <path to annotations> --metadata_path <path to metadata>
 ```
 
 e.g.
 
-```{bash}
+```bash
 python adjust_image.py --document_name 82253362_3364 --raw_document_directory '../data/shdocs_dataset/raw_captures/training_data/images' --processed_document_directory '../data/shdocs_dataset/processed_captures/training_data/images' --annotation_directory '../data/shdocs_dataset/processed_captures/training_data/annotations' --metadata_path "image_adjustments_metadata.json"
 ```
 
@@ -150,13 +150,13 @@ python adjust_image.py --document_name 82253362_3364 --raw_document_directory '.
 
 This functionality enables the use of past adjustment metadata files to process all raw documents. Our adjustment metadata is included [here](https://github.com/JovinLeong/SHDocs/blob/main/utils/image_adjustment_metadata/scaling_metadata.json). To apply past adjustments, go to the ```utils``` directory and run:
 
-```{bash}
+```bash
 python apply_image_adjustments.py --metadata <path to metadata> --image_directory <path to image directory> --output_directory <path to output directory>
 ```
 
 e.g.
 
-```{bash}
+```bash
 python apply_image_adjustments.py --metadata './image_adjustment_metadata/scaling_metadata.json' --image_directory '../data/shdocs_dataset/raw_captures/testing_data/images' --output_directory <path to output directory>
 ```
 
@@ -168,16 +168,27 @@ Once images have been aligned to the FUNSD annotations they can be cropped based
 
 To apply crop images based on their OCR annotations, go to the ```utils``` directory and run:
 
-```{bash}
+```bash
 python crop_funsd_documents.py --input_path <path to data and annotations formatted as per FUNSD> --output_path <path to where the crops should reside>   --bbox_buffer=<number of pixels to buffer bboxes> --dataset=<dataset type>
 ```
 
 e.g.
 
-```{bash}
+```bash
 python crop_funsd_documents.py --input_path ../data/shdocs_dataset/processed_captures --output_path ../data/shdocs_dataset_crops/s0_norm   --bbox_buffer=1 --dataset="s0_norm"
 ```
 
 ## Citation
 
-TODO: Update
+Please cite our paper if you find our contributions helpful to your research or work:
+
+```
+@inproceedings{
+leong2024shdocs,
+title={{SHD}ocs: A dataset, benchmark, and method to efficiently generate high-quality, real-world specular highlight data with near-perfect alignment},
+author={Jovin Leong and Koa Ming Di and Benjamin Cham Wen Bin and Shaun Heng},
+booktitle={The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+year={2024},
+url={https://openreview.net/forum?id=OfXwix3NRH}
+}
+```
