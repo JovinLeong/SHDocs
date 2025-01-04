@@ -1,10 +1,12 @@
 # SHDocs
 
-This is the official repository of SHDocs: A dataset, benchmark, and method to efficiently generate high-quality, real-world specular highlight data with near-perfect alignment.
+This is the official repository of SHDocs: A dataset, benchmark, and method to efficiently generate high-quality, real-world specular highlight data with near-perfect alignment [published in NeurIPS 2024](https://neurips.cc/virtual/2024/poster/97715).
 
 Abstract:
 
 > A frequent problem in vision-based reasoning tasks such as object detection and optical character recognition (OCR) is the persistence of specular highlights. Specular highlights appear as bright spots of glare that occur due to the concentrated reflection of light; these spots manifest as image artifacts which occlude computer vision models and are challenging to reconstruct. Despite this, specular highlight removal receives relatively little attention due to the difficulty of acquiring high-quality, real-world data. We introduce a method to generate specular highlight data with near-perfect alignment and present SHDocs—a dataset of specular highlights on document images created using our method. Through our benchmark, we demonstrate that our dataset enables us to surpass the performance of state-of-the-art specular highlight removal models and downstream OCR tasks. We release our dataset, code, and methods publicly to motivate further exploration of image enhancement for practical computer vision challenges.
+
+Our paper is accessible [here](https://openreview.net/forum?id=OfXwix3NRH#discussion); our virtual poster for NeurIPS 2024 is accessible [here](https://neurips.cc/virtual/2024/poster/97715).
 
 ## SHDocs dataset
 
