@@ -87,12 +87,14 @@ def evaluate_all_models(annotation_dir, inference_outputs_directory, evaluation_
         inference_outputs_filepath = f"{inference_outputs_directory}/{inference_output}"
         
         print(f"Evaluating model: {model}")
-        all_scores[model] = evaluate_ocr_model(annotation_dir=annotation_dir, 
-                                               inference_outputs_filepath=inference_outputs_filepath, 
-                                               evaluation_objective=evaluation_objective, 
-                                               model=model, 
-                                               output_dir=output_dir, 
-                                               save=False)
+        all_scores[model] = evaluate_ocr_model(
+            annotation_dir=annotation_dir, 
+            inference_outputs_filepath=inference_outputs_filepath, 
+            evaluation_objective=evaluation_objective, 
+            model=model, 
+            output_dir=output_dir, 
+            save=False
+        )
     # Output to JSON
     timenow = get_timenow()
     output_filename = f"{output_dir}/{evaluation_objective}_{timenow}.json"

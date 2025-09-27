@@ -86,8 +86,10 @@ if __name__ == "__main__":
     parser.add_argument('--output_dir', '-d', type=str, help='Output directory for evaluation results', default="../data/outputs/image_quality_evaluations")
     args = parser.parse_args()
 
-    evaluate_greyscale_image_quality(ground_truth_image_directory=args.ground_truth_image_directory,
-                                     enhanced_image_directory=args.enhanced_image_directory,
-                                     evaluation_objective=args.evaluation_objective, 
-                                     model=args.model, 
-                                     output_dir=args.output_dir)
+    evaluate_greyscale_image_quality(
+        ground_truth_image_directory=args.ground_truth_image_directory,
+        enhanced_image_directory=args.enhanced_image_directory,
+        evaluation_objective=args.evaluation_objective, 
+        model=args.model, 
+        output_dir=args.output_dir
+    )

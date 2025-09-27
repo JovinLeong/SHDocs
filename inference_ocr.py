@@ -14,10 +14,7 @@ import easyocr
 import pytesseract
 from dotenv import load_dotenv
 from azure.core.credentials import AzureKeyCredential
-from msrest.authentication import CognitiveServicesCredentials
-from azure.cognitiveservices.vision.computervision import ComputerVisionClient
-from azure.cognitiveservices.vision.computervision.models import VisualFeatureTypes, OperationStatusCodes
-from azure.ai.formrecognizer import FormRecognizerClient, DocumentAnalysisClient
+from azure.ai.formrecognizer import FormRecognizerClient
 
 def concatenate_images_vertically(image_files, image_dir, margin=10):
     
@@ -183,9 +180,11 @@ def textract_batched_inference(concatenated_image, concatenation_metadata, margi
     try: 
         # Predict
         response = textract_client.detect_document_text(Document={'Bytes': image_bytes})
-        aligned_predictions = align_textract_results(response, concatenation_metadata, 
-                                                     concatenated_image_dims=concatenated_image.size, 
-                                                     margin=margin)
+        aligned_predictions = align_textract_results(
+            response, concatenation_metadata, 
+            concatenated_image_dims=concatenated_image.size, 
+            margin=margin
+        )
         
         # Restructure results and update outputs
         predictions = {}
@@ -206,7 +205,7 @@ def textract_batched_inference(concatenated_image, concatenation_metadata, margi
                 }
             ]        
     return predictions
-      
+
 def perform_batched_ocr_on_image(input_dir, dataset, model, evaluation_set, alphabet_set, output_dir="../outputs", subset=[], margin=10):
     
     # Set metadata
@@ -409,9 +408,11 @@ if __name__ == "__main__":
     if args.method == 'individual':
         results = perform_ocr_on_image(input_dir=args.input_dir, dataset=args.dataset, model=args.model)
     else:
-        results = perform_batched_ocr_on_image(input_dir=args.input_dir, 
-                                               dataset=args.dataset, 
-                                               model=args.model, 
-                                               evaluation_set=FUNSD_EVAL_SET, 
-                                               alphabet_set=ALPHABET_SET)
+        results = perform_batched_ocr_on_image(
+            input_dir=args.input_dir, 
+            dataset=args.dataset, 
+            model=args.model, 
+            evaluation_set=FUNSD_EVAL_SET, 
+            alphabet_set=ALPHABET_SET
+        )
 
